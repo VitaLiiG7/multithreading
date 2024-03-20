@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  multithreading
-//
-//  Created by Виталий Горбунов on 18.03.2024.
-//
 
 import UIKit
 
