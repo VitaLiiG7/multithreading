@@ -26,13 +26,11 @@ class ViewControllerTenthTask3: UIViewController {
     let resourceBSemaphore = DispatchSemaphore(value: 1)
     
     func thread1() {
-   
+        resourceBSemaphore.wait()
         print("Поток 1 пытается захватить Ресурс A")
         resourceASemaphore.wait()
         print("Поток 1 захватил Ресурс A и пытается захватить Ресурс B")
         Thread.sleep(forTimeInterval: 1) // Имитация работы для демонстрации livelock
-        resourceBSemaphore.wait()
-        //resourceBSemaphore.wait() // Попытка захвата Ресурса B, который уже занят Потоком 2
         print("Поток 1 захватил Ресурс B")
         
         resourceBSemaphore.signal()
@@ -40,12 +38,12 @@ class ViewControllerTenthTask3: UIViewController {
     }
     
     func thread2() {
-        print("Поток 2 пытается захватить Ресурс B")
         resourceBSemaphore.wait()
+        print("Поток 2 пытается захватить Ресурс B")
+       
         print("Поток 2 захватил Ресурс B и пытается захватить Ресурс A")
         Thread.sleep(forTimeInterval: 1) // Имитация работы для демонстрации livelock
-        resourceASemaphore.wait()
-        // resourceASemaphore.wait() // Попытка захвата Ресурса A, который уже занят Потоком 1
+         resourceASemaphore.wait()
         print("Поток 2 захватил Ресурс A")
         
         resourceASemaphore.signal()
