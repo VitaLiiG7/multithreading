@@ -3,7 +3,7 @@ import UIKit
 
 /// Написать как называется проблема №3 которая в коде и решить ее
 //была проблема Livelock (Активная блокировка)
-class ViewControllerNinth: UIViewController {
+class ViewControllerNinthTask3: UIViewController {
     private let queue = DispatchQueue(label: "очередь 2", attributes: .concurrent)
     let semafor = DispatchSemaphore(value: 1)
     override func viewDidLoad() {

@@ -14,27 +14,31 @@ protocol RMOperationProtocol {
     var completionBlock: (() -> Void)? { get }
     // Завершена ли операция
     var isFinished: Bool { get }
+    // Начата ли операция
+    var isExecuting: Bool { get }
     // Метод для запуска операции
     func start()
 }
 ///N°2 Давайте напишем свой аналог Operation что бы лучше понять его. Реализуйте операцию по протоколу RMOperationProtocol. Реализуйте так что код viewDidLoad работал как положено. Как закончите для сравнения замените RMOperation на Operation из Swift.
-class ViewControllerEleventhRMOperation: UIViewController, RMOperationProtocol {
+class RMOperation: RMOperationProtocol {
+    var isExecuting = false
     var priority: DispatchQoS.QoSClass = .unspecified
     var completionBlock: (() -> Void)?
-    var isFinished: Bool = false
+    var isFinished = false
     
     func start() {
         DispatchQueue.global(qos: priority).async {
-            self.isFinished = true
             self.completionBlock?()
         }
     }
+}
+ 
+class ViewControllerTwelfthTask3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let operationFirst = ViewControllerEleventhRMOperation()
-        let operationSecond = ViewControllerEleventhRMOperation()
-        
+        let operationFirst = RMOperation()
+        let operationSecond = RMOperation()
         
         operationFirst.priority = .userInitiated
         operationFirst.completionBlock = {
@@ -59,3 +63,4 @@ class ViewControllerEleventhRMOperation: UIViewController, RMOperationProtocol {
         operationSecond.start()
     }
 }
+

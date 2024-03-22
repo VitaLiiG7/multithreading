@@ -7,7 +7,7 @@
 
 import UIKit
 ///Задача исправить AsyncWorker так, чтобы completion возвращал сразу все 5 постов в главном потоке.
-class ViewControllerEighth: UIViewController {
+class ViewControllerEighthTask3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

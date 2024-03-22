@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController_____: UIViewController {
+///Сервис добавляет 10 элементов в массив сервиса, задача удалять последний Workltem что б в массив попали все элементы с 1...9 кроме 10
+class ViewControllerEleventhTask3: UIViewController {
 
     override func viewDidLoad() {
            super.viewDidLoad()
@@ -37,8 +38,7 @@ class ViewController_____: UIViewController {
 
            // Даем пользователю время для отмены операции
            DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-               // Логика тут eсли операция не была отменена, выполняем ее
-               // ...
+               DispatchQueue.main.async(execute: newWorkItem)
            }
        }
 
@@ -48,9 +48,7 @@ class ViewController_____: UIViewController {
                print("Нет операций для отмены.")
                return
            }
-
-           // Тут отменяем последнюю операцию
-           // ...
+           lastWorkItem.cancel()
        }
    }
 }

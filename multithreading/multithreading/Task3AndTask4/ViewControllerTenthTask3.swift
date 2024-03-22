@@ -9,7 +9,7 @@ import UIKit
 
 /// Написать как называется проблема №4 которая в коде и решить ее
 //была проблема Livelock (Активная блокировка)
-class ViewControllerTenth: UIViewController {
+class ViewControllerTenthTask3: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
