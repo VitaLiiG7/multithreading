@@ -26,6 +26,13 @@
 		21F0E0112BACD84900149086 /* ViewControllerThirteenthTask4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0102BACD84900149086 /* ViewControllerThirteenthTask4.swift */; };
 		21F0E0132BAD068300149086 /* ViewControllerEleventhTask3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0122BAD068300149086 /* ViewControllerEleventhTask3.swift */; };
 		21F0E0152BAD6F8E00149086 /* ViewControllerFourteenthTask4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0142BAD6F8E00149086 /* ViewControllerFourteenthTask4.swift */; };
+		21F0E0182BADC58800149086 /* Task5.1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0172BADC58800149086 /* Task5.1.swift */; };
+		21F0E01A2BADC86500149086 /* Task5.2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0192BADC86500149086 /* Task5.2.swift */; };
+		21F0E01C2BADC88900149086 /* Task5.3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E01B2BADC88900149086 /* Task5.3.swift */; };
+		21F0E01E2BADC9A000149086 /* Task5.4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E01D2BADC9A000149086 /* Task5.4.swift */; };
+		21F0E0202BADC9D800149086 /* Task5.5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E01F2BADC9D800149086 /* Task5.5.swift */; };
+		21F0E0222BADCBCB00149086 /* Task5.6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0212BADCBCB00149086 /* Task5.6.swift */; };
+		21F0E0242BADCD0300149086 /* Task5.7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F0E0232BADCD0300149086 /* Task5.7.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +57,13 @@
 		21F0E0102BACD84900149086 /* ViewControllerThirteenthTask4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerThirteenthTask4.swift; sourceTree = "<group>"; };
 		21F0E0122BAD068300149086 /* ViewControllerEleventhTask3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEleventhTask3.swift; sourceTree = "<group>"; };
 		21F0E0142BAD6F8E00149086 /* ViewControllerFourteenthTask4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFourteenthTask4.swift; sourceTree = "<group>"; };
+		21F0E0172BADC58800149086 /* Task5.1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.1.swift; sourceTree = "<group>"; };
+		21F0E0192BADC86500149086 /* Task5.2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.2.swift; sourceTree = "<group>"; };
+		21F0E01B2BADC88900149086 /* Task5.3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.3.swift; sourceTree = "<group>"; };
+		21F0E01D2BADC9A000149086 /* Task5.4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.4.swift; sourceTree = "<group>"; };
+		21F0E01F2BADC9D800149086 /* Task5.5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.5.swift; sourceTree = "<group>"; };
+		21F0E0212BADCBCB00149086 /* Task5.6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.6.swift; sourceTree = "<group>"; };
+		21F0E0232BADCD0300149086 /* Task5.7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.7.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +100,7 @@
 				21AF41E62BA84EA7009AB94C /* SceneDelegate.swift */,
 				21F0E0022BAB198700149086 /* Task1AndTask2 */,
 				21F0E0032BAB19C000149086 /* Task3AndTask4 */,
+				21F0E0162BADC00200149086 /* Task5 */,
 				21AF41EA2BA84EA7009AB94C /* Main.storyboard */,
 				21AF41ED2BA84EA9009AB94C /* Assets.xcassets */,
 				21AF41EF2BA84EA9009AB94C /* LaunchScreen.storyboard */,
@@ -120,6 +135,20 @@
 				21F0E0142BAD6F8E00149086 /* ViewControllerFourteenthTask4.swift */,
 			);
 			path = Task3AndTask4;
+			sourceTree = "<group>";
+		};
+		21F0E0162BADC00200149086 /* Task5 */ = {
+			isa = PBXGroup;
+			children = (
+				21F0E0172BADC58800149086 /* Task5.1.swift */,
+				21F0E0192BADC86500149086 /* Task5.2.swift */,
+				21F0E01B2BADC88900149086 /* Task5.3.swift */,
+				21F0E01D2BADC9A000149086 /* Task5.4.swift */,
+				21F0E01F2BADC9D800149086 /* Task5.5.swift */,
+				21F0E0212BADCBCB00149086 /* Task5.6.swift */,
+				21F0E0232BADCD0300149086 /* Task5.7.swift */,
+			);
+			path = Task5;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,15 +228,22 @@
 				21F0E00F2BACBD0F00149086 /* ViewControllerTwelfthTask3.swift in Sources */,
 				21F0E00D2BAB832B00149086 /* ViewControllerTenthTask3.swift in Sources */,
 				21F0E0132BAD068300149086 /* ViewControllerEleventhTask3.swift in Sources */,
+				21F0E01A2BADC86500149086 /* Task5.2.swift in Sources */,
 				21AF41E52BA84EA7009AB94C /* AppDelegate.swift in Sources */,
 				21F0E00B2BAB6EB100149086 /* ViewControllerNinthTask3.swift in Sources */,
+				21F0E0202BADC9D800149086 /* Task5.5.swift in Sources */,
+				21F0E0182BADC58800149086 /* Task5.1.swift in Sources */,
 				21F0E0152BAD6F8E00149086 /* ViewControllerFourteenthTask4.swift in Sources */,
 				21AF41F92BA8CF34009AB94C /* ViewControllerTwo.swift in Sources */,
 				21AF42012BAA44FF009AB94C /* ViewControllerFive.swift in Sources */,
 				21AF41FD2BAA14A4009AB94C /* ViewControllerFourth.swift in Sources */,
 				21F0E0052BAB19F600149086 /* ViewControllerSevenTask3.swift in Sources */,
 				21AF41E72BA84EA7009AB94C /* SceneDelegate.swift in Sources */,
+				21F0E0242BADCD0300149086 /* Task5.7.swift in Sources */,
+				21F0E01C2BADC88900149086 /* Task5.3.swift in Sources */,
 				21AF41FF2BAA1655009AB94C /* ViewControllerSix.swift in Sources */,
+				21F0E01E2BADC9A000149086 /* Task5.4.swift in Sources */,
+				21F0E0222BADCBCB00149086 /* Task5.6.swift in Sources */,
 				21F0E0072BAB249900149086 /* ViewControllerEighthTask3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
