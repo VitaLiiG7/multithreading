@@ -12,14 +12,12 @@ class Task5_4: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
         Task {
-            do {
-                let result = try await randomD6()
-                 print(result)
-            }
+                let result = await randomD6()
+                print(result)
         }
     }
     
-    func randomD6() async throws -> Int {
+    func randomD6() async -> Int {
         Int.random(in: 1...6)
     }
 }

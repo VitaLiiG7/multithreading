@@ -18,68 +18,69 @@ class Task5_5: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 1 решение
         Task {
-            do {
-                let messager = try await fetchMessagesResult()
-                print(messager)
-            } catch {
-                print("Failed to fetch messages: \(error)")
-                
-            }
+            let messager = await fetchMessagesResult()
+            print(messager)
         }
+        
+        // 2 решение
+        //        Task {
+        //            do {
+        //                let messager = try await fetchMessagesResult()
+        //                print(messager)
+        //            } catch {
+        //                print("Failed to fetch messages: \(error)")
+        //
+        //            }
+        //        }
     }
     
     // 1 решение
-//        func fetchMessagesResult() async throws -> [Message] {
-//            await withCheckedContinuation { continuation in
-//                networkService.fetchMessages { message in
-//                    continuation.resume(returning: message)
-//                }
-//            }
-//        }
-    
-    // 2 решение
-    func fetchMessagesResult() async throws -> [Message] {
-        try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<[Message], Error>) in
-            networkService.fetchMessages {  messages  in
-                if messages.isEmpty {
-                    continuation.resume(throwing: FetchError.noMessages)
-                } else {
-                    continuation.resume(returning: messages)
-                }
+    func fetchMessagesResult() async -> [Message] {
+        await withCheckedContinuation { continuation in
+            networkService.fetchMessages { message in
+                continuation.resume(returning: message)
             }
         }
     }
-}
     
+    // 2 решение
+    //    func fetchMessagesResult() async throws -> [Message] {
+    //        try await withCheckedThrowingContinuation { continuation in
+    //            networkService.fetchMessages {  messages  in
+    //                if messages.isEmpty {
+    //                    continuation.resume(throwing: FetchError.noMessages)
+    //                } else {
+    //                    continuation.resume(returning: messages)
+    //                }
+    //            }
+    //        }
+    //    }
+}
+
+struct Message: Decodable, Identifiable {
+    let id: Int
+    let from: String
+    let message: String
+}
+
+class NetworkService {
+    func fetchMessages(completion: @escaping ([Message]) -> Void) {
+        let url = URL(string: "https://hws.dev/user-messages.json")!
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                if let messages = try? JSONDecoder().decode([Message].self, from: data) {
+                    completion(messages)
+                    return
+                }
+            }
+            
+            completion([])
+        }
+        .resume()
+    }
+}
 
 
-  struct Message: Decodable, Identifiable {
-      let id: Int
-      let from: String
-      let message: String
-  }
-
-  class NetworkService {
-      func fetchMessages(completion: @escaping ([Message]) -> Void) {
-          let url = URL(string: "https://hws.dev/user-messages.json")!
-
-          URLSession.shared.dataTask(with: url) { data, response, error in
-              if let data = data {
-                  if let messages = try? JSONDecoder().decode([Message].self, from: data) {
-                      completion(messages)
-                      return
-                  }
-              }
-
-              completion([])
-          }
-          .resume()
-      }
-  }
-
-//if messages.isEmpty {
-//     continuation.resume(throwing: ...
-//} else {
-//    resume(returning:...
-//}

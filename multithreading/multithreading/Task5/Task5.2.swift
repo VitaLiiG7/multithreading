@@ -11,7 +11,6 @@ import UIKit
 class Task5_2: UIViewController {
     override func viewDidLoad() {
             super.viewDidLoad()
-        
         print(1)
         Task { @MainActor  in
             print(2)
