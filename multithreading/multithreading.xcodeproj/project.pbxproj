@@ -64,6 +64,7 @@
 		21F0E01F2BADC9D800149086 /* Task5.5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.5.swift; sourceTree = "<group>"; };
 		21F0E0212BADCBCB00149086 /* Task5.6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.6.swift; sourceTree = "<group>"; };
 		21F0E0232BADCD0300149086 /* Task5.7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task5.7.swift; sourceTree = "<group>"; };
+		21F0E0482BB3063B00149086 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 				21F0E0022BAB198700149086 /* Task1AndTask2 */,
 				21F0E0032BAB19C000149086 /* Task3AndTask4 */,
 				21F0E0162BADC00200149086 /* Task5 */,
+				21F0E0482BB3063B00149086 /* MyPlayground.playground */,
 				21AF41EA2BA84EA7009AB94C /* Main.storyboard */,
 				21AF41ED2BA84EA9009AB94C /* Assets.xcassets */,
 				21AF41EF2BA84EA9009AB94C /* LaunchScreen.storyboard */,

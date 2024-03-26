@@ -10,10 +10,10 @@ import UIKit
 ///По практикуйтесь, переведите данный код на async/await.
 class Task5_4: UIViewController {
     override func viewDidLoad() {
-            super.viewDidLoad()
+        super.viewDidLoad()
         Task {
-                let result = await randomD6()
-                print(result)
+            let result = await randomD6()
+            print(result)
         }
     }
     
