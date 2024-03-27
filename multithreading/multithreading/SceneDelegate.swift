@@ -11,7 +11,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func createRootViewController(_ windowScene: UIWindowScene) {
-        let mainViewController = ViewControllerThird()
+        let mainViewController = ViewControllerThirteenthTask4()
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()
